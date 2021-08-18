@@ -8,7 +8,6 @@
 //includes both highest and lowest notes, so number of notes = highest_note-lowest_note+1
 const int LOWEST_NOTE = 39;
 const int HIGHEST_NOTE = 76;
-const double SEMITONE_MULTIPLIER = 1.059;
 
 class VirtualPiano
 {
@@ -22,10 +21,10 @@ private:
 
 	std::array<sf::Sound*, (HIGHEST_NOTE - LOWEST_NOTE +1)> sounds;
 	std::array<std::string, 12> notes;
-	std::array<int, 37> keys;
+	std::array<int, (HIGHEST_NOTE - LOWEST_NOTE + 1)> keys;
 
 	int lowest_note;
 	int highest_note;
-	int start_time;
+	float start_time;
 };
 
