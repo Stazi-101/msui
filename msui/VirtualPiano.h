@@ -1,13 +1,10 @@
 #pragma once
-#include <SFML/Audio.hpp>
+#include <array>
 #include <SFML/Window.hpp>
 
-#include <array>
-#include <string>
+#include "SampleBoard.h"
 
-//includes both highest and lowest notes, so number of notes = highest_note-lowest_note+1
-const int LOWEST_NOTE = 39;
-const int HIGHEST_NOTE = 76;
+
 
 class VirtualPiano
 {
@@ -16,15 +13,14 @@ public:
 	void giveEvent(sf::Event);
 
 private:
-	void loadSounds();
-	void playSound(int);
 
-	std::array<sf::Sound*, (HIGHEST_NOTE - LOWEST_NOTE +1)> sounds;
-	std::array<std::string, 12> notes;
+	SampleBoard* sample_board;
+
 	std::array<int, (HIGHEST_NOTE - LOWEST_NOTE + 1)> keys;
 
 	int lowest_note;
 	int highest_note;
+	
 	float start_time;
 };
 

@@ -21,9 +21,15 @@
     <ClCompile Include="VirtualPiano.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SampleBoard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VirtualPiano.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SampleBoard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
