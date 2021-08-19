@@ -7,39 +7,20 @@
 #include "VirtualPiano.h"
 
 
-
-
-
 void loop();
 
 
-
-int main(int argc, char* args[]){
-
-
+int main(int argc, char* args[])
+{
 	loop();
-
 	return 0;
 }
-
 
 
 void loop() {
 
 	sf::Window* window = new sf::Window(sf::VideoMode(800, 600), "awooga");
-
-	sf::Sound sound;
-	sf::SoundBuffer buffer;
-	if (!buffer.loadFromFile("C:\\Users\\anast\\Music\\piano_samples\\a5v1.wav")) {
-		std::cout << "File not able to load\n";
-		return;
-	}
-	sound.setBuffer(buffer);
-
-	double pitch = 1;
-
 	sf::Clock clock;
-
 	VirtualPiano vpiano = VirtualPiano(clock.getElapsedTime());
 
 	// run the program as long as the window is open
@@ -62,6 +43,7 @@ void loop() {
 	}
 
 }
+
 
 void example_sounds() {
 	sf::SoundBuffer buffer;

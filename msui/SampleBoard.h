@@ -19,11 +19,9 @@ public:
 private:
 	void loadSounds();
 	
-
 	std::array<sf::Sound*, (HIGHEST_NOTE - LOWEST_NOTE + 1)> sounds;
 	std::array<std::string, 12> notes;
 	
-
 	int lowest_note;
 	int highest_note;
 };

@@ -3,8 +3,6 @@
 #include <iostream>
 
 
-
-
 SampleBoard::SampleBoard() {
 
 	//note names
