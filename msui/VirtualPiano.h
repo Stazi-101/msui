@@ -9,7 +9,7 @@
 class VirtualPiano
 {
 public:
-	VirtualPiano(sf::Time);
+	VirtualPiano(sf::Time, SampleBoard*);
 	void giveEvent(sf::Event);
 
 private:

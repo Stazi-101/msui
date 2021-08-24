@@ -31,9 +31,8 @@ void SampleBoard::loadSounds() {
 		//load sound
 		sf::Sound* sound = new sf::Sound();
 		sf::SoundBuffer* buffer = new sf::SoundBuffer();
-		if (!buffer->loadFromFile(path)) {
-			return;
-		}
+		//Exit if sound not loaded properly
+		if (!buffer->loadFromFile(path)) { continue; }
 		sound->setBuffer(*buffer);
 
 		//pitch shift the nearest sampled note to get the real note
@@ -52,5 +51,5 @@ void SampleBoard::loadSounds() {
 
 void SampleBoard::playSound(int n) {
 	
-	sounds[n]->play();
+	sounds[n - lowest_note]->play();
 }

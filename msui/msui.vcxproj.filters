@@ -13,24 +13,48 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Structures">
+      <UniqueIdentifier>{50305266-ccac-4845-ba1a-3bebac96b252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Input methods">
+      <UniqueIdentifier>{e2e0c69f-7273-4e62-bf4d-1e6cf0466160}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Structures">
+      <UniqueIdentifier>{a1818288-ec35-41c0-a1f1-ce8bd39659c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Input methods">
+      <UniqueIdentifier>{c0fda6ba-8b66-4931-ae7e-9736a11b1c10}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VirtualPiano.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SampleBoard.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="TabReader.cpp">
+      <Filter>Source Files\Input methods</Filter>
+    </ClCompile>
+    <ClCompile Include="VirtualPiano.cpp">
+      <Filter>Source Files\Input methods</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicStructs.cpp">
+      <Filter>Source Files\Structures</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="VirtualPiano.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SampleBoard.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="TabReader.h">
+      <Filter>Header Files\Input methods</Filter>
+    </ClInclude>
+    <ClInclude Include="VirtualPiano.h">
+      <Filter>Header Files\Input methods</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicStructs.h">
+      <Filter>Header Files\Structures</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

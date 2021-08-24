@@ -145,12 +145,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MusicStructs.cpp" />
     <ClCompile Include="SampleBoard.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="TabReader.cpp" />
     <ClCompile Include="VirtualPiano.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MusicStructs.h" />
     <ClInclude Include="SampleBoard.h" />
+    <ClInclude Include="TabReader.h" />
     <ClInclude Include="VirtualPiano.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

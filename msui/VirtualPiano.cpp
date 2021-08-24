@@ -4,12 +4,12 @@
 
 
 
-VirtualPiano::VirtualPiano(sf::Time given_start_time) {
+VirtualPiano::VirtualPiano(sf::Time given_start_time, SampleBoard* given_sample_board) {
 	lowest_note = LOWEST_NOTE;
 	highest_note = HIGHEST_NOTE;
 	start_time = given_start_time.asSeconds();
 
-	sample_board = new SampleBoard();
+	sample_board = given_sample_board;
 	
 
 	//keys corresponding to notes, written lowest to highest separated by semitones
@@ -54,13 +54,14 @@ VirtualPiano::VirtualPiano(sf::Time given_start_time) {
 		
 }
 
+
 void VirtualPiano::giveEvent(sf::Event new_event) {
 
 
 	int i = 0;
 	for (int k : keys) {
 		if (new_event.key.code == k) {
-			sample_board->playSound(i);
+			sample_board->playSound(i+LOWEST_NOTE);
 			break;
 		}
 
