@@ -6,6 +6,7 @@
 
 #include "VirtualPiano.h"
 #include "MusicStructs.h"
+#include "TabReader.h"
 
 
 void loop();
@@ -20,6 +21,8 @@ int main(int argc, char* args[])
 
 void loop() {
 
+	TabReader* tab_reader = new TabReader();
+	tab_reader->readConsoleInput();
 	SampleBoard* sample_board = new SampleBoard();
 	
 	sf::Window* window = new sf::Window(sf::VideoMode(800, 600), "awooga");
@@ -27,7 +30,7 @@ void loop() {
 
 	VirtualPiano vpiano = VirtualPiano(clock.getElapsedTime(), sample_board);
 
-	Track* test_track = make_example_track();
+	Track* test_track = tab_reader->getTrack();
 	TrackPlayer track_player = TrackPlayer(sample_board);
 	track_player.addTrack(test_track);
 

@@ -50,6 +50,11 @@ void SampleBoard::loadSounds() {
 }
 
 void SampleBoard::playSound(int n) {
+
+	std::cout << "played " << notes[n % 12]  << '\n';
+
+	while (n < lowest_note) { n += 12; }
+	while (n > highest_note) { n -= 12; }
 	
 	sounds[n - lowest_note]->play();
 }

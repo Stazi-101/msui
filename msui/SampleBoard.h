@@ -6,7 +6,7 @@
 #include <SFML/Audio.hpp>
 
 //includes both highest and lowest notes, so number of notes = highest_note-lowest_note+1
-const int LOWEST_NOTE = 39;
+const int LOWEST_NOTE = 30;
 const int HIGHEST_NOTE = 76;
 
 
